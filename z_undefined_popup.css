@@ -1,0 +1,26 @@
+body {
+    height: 600px;
+}
+
+.h1_name {
+    text-align: center;
+}
+
+.div_chart {
+    width: 66%;
+    height: 100%;
+}
+#myChart {
+    width:66%;
+    height:100%;
+}
+
+/* 화재 log 스크롤에 관한 내용 */
+html {
+    /* overflow:scroll; */
+    overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}

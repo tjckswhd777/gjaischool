@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var xhr = new XMLHttpRequest();
+var url = 'http://apis.data.go.kr/1661000/FireInformationService/getOcByfrstFireSmrzPcnd'; /*URL*/
+var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'66P1ncy7qctaQzlGSWTtc%2Fw8O5DSjQcsTx8pnIwMmDZusMECPYVSKh8KpXsq6adhl1shH13ggGjQceIy979Ekw%3D%3D'; /*Service Key*/
+queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('100'); /**/
+queryParams += '&' + encodeURIComponent('resultType') + '=' + encodeURIComponent('XML'); /**/
+queryParams += '&' + encodeURIComponent('ocrn_ymd') + '=' + encodeURIComponent('20201106'); /**/
+xhr.open('GET', url + queryParams);
+xhr.onreadystatechange = function () {
+    if (this.readyState == 4) {
+        alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
+        console.log(this.responseText)
+    }
+};
+
+xhr.send('');
+</script>
+</html>
